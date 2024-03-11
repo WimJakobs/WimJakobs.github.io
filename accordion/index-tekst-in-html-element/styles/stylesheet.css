@@ -1,0 +1,258 @@
+/* ---------------------------------------------------------  Inhoud    ---------------------------------------------------------------- */
+/* ------------ Algemeen ----------------------- */
+/* ------------ Mobiel ------------------------ */
+/* ------------ Desktop ---------------------- */
+
+
+
+
+/* ---------------------------------------------------------  Algemeen  ---------------------------------------------------------------- */
+
+:root {
+
+
+ /*   ### Primary  */
+
+/*#### Text */
+
+ --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+ --Soft-red: hsl(14, 88%, 65%);
+
+/* #### Gradient */
+
+/* Background gradient: */
+
+--Soft-violet: hsl(273, 75%, 66%);
+--Soft-blue: hsl(240, 73%, 65%);
+--Soft-violet-alpha: hsl(273, 75%, 66%, 1);
+--Soft-blue-alpha: hsl(240, 73%, 65%, 1);
+
+
+/* ### Neutral */
+
+/* #### Text */
+
+--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+--Dark-grayish-blue: hsl(240, 6%, 50%);
+
+/* #### Dividers */
+--Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+
+* { 
+    font-family: 'Kumbh Sans', sans-serif;
+    
+    box-sizing: border-box;
+    
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+.container-sub {
+    background-color: white;
+
+    border-radius: 23px;
+}
+
+
+
+.vraag-en-antwoord {
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    padding-top: 3px;        /* 3px van gemaakt want wil niet dat bij lijn al direct oversprint */       /* was 16px */
+    padding-bottom: 3px;    /* zie padding-top */
+}
+
+
+.vraag {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 14px;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+.vraag:hover {
+    color: var(--Soft-red);
+    cursor: url(../../images/hand-pointer-regular-32px-32px.svg), pointer;
+}
+
+
+.arrow {
+    align-self: center;
+}
+
+
+.antwoord {
+    display: none;
+    font-size: 12px;
+    color: var(--Dark-grayish-blue);
+    line-height: 18px;
+    margin-top: -2px;
+    padding-top: 0px;                         /* was 10px */
+    padding-bottom: 14px;
+}
+
+
+
+
+/* ---------------------------------------------------------  Mobiel  ------------------------------------------------------------------ */
+
+@media screen and (max-width: 1450px) {
+    .container { 
+        width: 375px;
+        height: 768px;
+        padding-top: 148px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(hsl(271.38deg 75.58% 66.27%), hsl(251.54deg 71.43% 64.31%));   /* handmatig door colorpicker gedaan want ofiiciele kleuren niet toereikend genoeg. */
+    }
+
+
+    .container-sub {
+        position: relative;
+        width: 327px;
+        height: 535px;
+        
+        padding-top: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        background-image: url('../../images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top 0px left 45px;     
+        
+        box-shadow: -4px 50px 18px -21px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .container-sub::before {
+        position: absolute;
+        content: url('../../images/illustration-woman-online-mobile.svg');
+        top: -107px;
+        left: 17px;
+    }
+
+
+    .container-h-vraag-antwoord {
+        width: 279px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    h1 {
+        padding-bottom: 14px;
+        text-align: center;
+    }
+
+
+    .vraag-en-antwoord {
+        padding-top: 3px;        /* 3px van gemaakt want wil niet dat bij lijn al direct oversprint */       /* was 16px */
+        padding-bottom: 4px;    /* zie padding-top */  /* was 16px */
+    }
+
+
+    .vraag {
+        font-size: 13.2px;
+
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+
+    .antwoord {
+        font-size: 12.2px;
+        line-height: 18px;
+        margin-top: -2px;
+        padding-top: 0px;                         /* was 10px */
+        padding-bottom: 14px;
+        padding-right: 32px;
+    }
+
+
+
+}
+
+
+
+
+/* ---------------------------------------------------------  Desktop  ----------------------------------------------------------------- */
+@media screen and (min-width: 1450px) {
+    .container { 
+        width: 1440px;
+        height: 768px;
+        
+        padding-top: 128px;
+        padding-left: 281px;
+        margin-left: auto;
+        margin-right: auto;
+
+        background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+    }
+
+
+    .container-sub {
+        position: relative;
+        width: 919px;
+        height: 509px;
+        
+        background-image: url('../../images/illustration-woman-online-desktop.svg'), url('../../images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top 71px left -81px, top -295px left -574px; 
+    }
+
+
+    #illustration-box-desktop {
+        position: absolute;
+        left: -93px;
+        top: 204px;
+    }
+
+
+    #illustration-box-desktop::before {
+        content: url('../../images/illustration-box-desktop.svg');
+    }
+
+
+    .container-h-vraag-antwoord {
+        padding-top: 63px; 
+
+        margin-left: 476px;
+        width: 348px;
+    }
+
+
+    h1 {
+        padding-bottom: 21px;
+    }
+
+
+    .vraag {
+        padding-right: 14px;
+    }
+
+
+    .antwoord {
+        padding-right: 14px;
+    }
+
+}
+
+
+
+
+
+
+
+

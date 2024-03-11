@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+
+    
+
+</head>
+<body>
+    <div class="container">   <!-- deze container is noodzaak omdat in <body> achtergrondkleur over de gehele scherm doorloopt -->
+        <div class="container-sub">
+            
+            <div id="illustration-box-desktop"></div>
+            
+            <div class="container-h-vraag-antwoord">
+                <h1 class="FAQ">FAQ</h1>
+                
+                <div class="vraag-en-antwoord">      <!-- deze div mag worden ingezet  want vraag en antwoord is als groep aan te merken.    Verder nodig voor event.target.ParentElement in JS -->
+                    <div class="vraag">How many team members can I invite?<img src="../images/icon-arrow-down.svg" alt="arrow-down"></div>
+                    <div class="antwoord">You can invite up to 2 additional users on the Free plan. There is no limit on 
+                        team members for the Premium plan.</div>
+                </div>
+
+                <div class="vraag-en-antwoord">
+                    <div class="vraag">What is the maximum file upload size?<img src="../images/icon-arrow-down.svg" alt="arrow-down"></div>
+                    <div class="antwoord">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+                </div>
+
+                <div class="vraag-en-antwoord">
+                    <div class="vraag">How do I reset my password?<img src="../images/icon-arrow-down.svg"  alt="arrow-down"></div>
+                    <div class="antwoord">Click “Forgot password” from the login page or “Change password” from your profile page.
+                    A reset link will be emailed to you.</div>
+                </div>
+
+                
+                
+
+                <div class="vraag-en-antwoord">
+                    <div class="vraag">Can I cancel my subscription?<img src="../images/icon-arrow-down.svg" alt="arrow-down"></div>
+                    <div class="antwoord">Yes! Send us a message and we’ll process your request no questions asked.</div>
+                </div>
+
+                <div class="vraag-en-antwoord">
+                    <div class="vraag">Do you provide additional support?<img src="../images/icon-arrow-down.svg" alt="arrow-down"></div>
+                    <div class="antwoord">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/script.js"></script>    
+
+</body>
+
+
+
+
+</html>
