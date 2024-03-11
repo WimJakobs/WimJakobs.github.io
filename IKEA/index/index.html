@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikea</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        
+    </style> 
+
+</head>
+<body>
+    <div class="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li>Producten
+                            <!-- <ul><li>Kranen</li><li>Meubels</li><li>Stoelen</li></ul>    had gedacht: meteen menu bouwen -->
+                        </li>
+                        <li>Ruimte
+                            <!-- <ul><li>Keuken</li><li>Woonkamer</li><li>Badkamer</li></ul>  had gedacht: meteen menu bouwen -->
+                        </li>
+                        <li>Nieuw</li>
+                        <li>Aanbiedingen</li>
+                    </ul>
+                </nav>
+
+                <form id="result-zoekform" method="post" action="www.test.nl">
+                    <label for="zoekopdracht"></label>
+                    <!-- <i class="icon-search"></i> -->
+                    <input name="zoekveld" id="zoekopdracht" type="text" form="result-zoekform" placeholder="Waar ben je naar op bezoek?"> 
+                </form>
+            </header>
+            
+            <img class="logo" src="../images/logo.png" alt="IKEA logo">
+            
+            <main>
+                <h1>Brönden</h1>
+                <p class="korte-omschrijving">Vloerkleed, laagpolig, handgemaakt veelkleurig/rood, <span class="underline">200x300cm</span></p>
+                <div class="prijs">€399,-</div>
+            </main> 
+            
+            <img src="../images/bronden-vloerkleed-1.jpg" alt="vloerkleed op vloer">
+            <!-- <p class="test"></p>  -->
+            <p class="lange-omschrijving">Een mix van verschillende weefsels creëert dit levendige patroon met veel textuur en karakter. Elk tapijt wordt met de hand geweven door bekwame ambachtslui en is daarom een uniek kanstwerk in zuivere wol.</p>
+            
+            <img src="../images/bronden-vloerkleed-2.jpg" alt="vloerkleed ingezoomd">
+            
+            <div class="formulier1">
+                <!-- <label for="kies-kleur" class="text-vraag">Kies kleur</label> -->
+                <fieldset id="kies-kleur">
+                    <legend>Kies kleur</legend>
+                    <input id="bronden-vloerkleed-kleur-1" type="radio" name="kies-kleur"><label for="bronden-vloerkleed-kleur-1"></label>
+                    <input id="bronden-vloerkleed-kleur-2" type="radio" name="kies-kleur"><label for="bronden-vloerkleed-kleur-2"></label>
+                    <input id="bronden-vloerkleed-kleur-3" type="radio" name="kies-kleur"><label for="bronden-vloerkleed-kleur-3"></label>
+                </fieldset>
+
+                <hr>
+                
+                <!-- <label for="kies-afmeting" class="text-vraag">Kies afmeting</label> -->
+                <fieldset id="kies-afmeting">
+                    <legend>Kies afmeting</legend>
+                    <input id="133x195cm" type="radio" name="kies-afmeting"><label for="133x195cm"><span>133x195 cm</span></label>
+                    <input id="170x240cm" type="radio" name="kies-afmeting"><label for="170x240cm"><span>170x240 cm</span></label>
+                    <input id="200x300cm" type="radio" name="kies-afmeting"><label for="200x300cm"><span>200x300 cm</span></label>
+                </fieldset>
+            </div>
+
+            <div class="formulier2">
+                <!-- <label for="hoe-kom-je-eraan" class="text-vraag">Hoe kom je eraan?</label> -->
+                <fieldset id="hoe-kom-je-eraan">
+                    <legend>Hoe kom je eraan?</legend>
+                    
+                    <input id="levering" type="radio" name="hoe-kom-je-eraan">
+                    <label for="levering">
+                        <img src="../images/delivery.svg" alt="">
+                        <span class="vet">Levering</span>
+                        <span>Beschikbaar voor <span class="underline">7521AN</span></span>
+                    </label>      <!-- kan nog een extra inputveld in om postcode in te vullen echter zou normaliter in personila moeten zijn ingevuld, dus van daaruit ingelezen moeten zijn -->
+                    
+                    <input id="Bestellen-en-ophalen" type="radio" name="hoe-kom-je-eraan">
+                    <label for="Bestellen-en-ophalen">
+                        <img src="../images/click-collect.svg" alt="">
+                        <span class="vet">Bestellen & ophalen</span>
+                        <span>Verkrijgbaar bij IKEA <span class="underline">Hengelo</span></span>
+                    </label>
+                    
+                    <input id="in-de-winkel" type="radio" name="hoe-kom-je-eraan">
+                    <label for="in-de-winkel">
+                        <img src="../images/store-icon.svg" alt="">
+                        <span class="vet">In de winkel</span>
+                        <span>Op voorraad in <span class="underline">Hengelo</span></span>
+                    </label>
+                </fieldset>
+                
+                <button class="vet text-vraag">Voeg toe aan winkelwagen</button>
+        
+            </div>
+
+            <div class="productinformatie">
+                <a>Productinformatie<img src="../images/right-arrow-svg.svg" alt="pijl naar rechts"></a> <!-- href leeg is beter weglaten -->
+            </div>
+        
+    </div>
+</body>
+</html>

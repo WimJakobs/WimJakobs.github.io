@@ -1,0 +1,623 @@
+/* ----------------------------------------------- Inhoud --------------------------------------------------- */
+
+/* Basic */
+/* Mobile */
+/* Desktop */
+
+
+
+
+/* ----------------------------------------------- Basic --------------------------------------------------- */
+:root {
+    --black: #000000;
+    --beige-light: #f2f2f2;
+    --beige-middle:#dfdfdf;
+    --beige-dark:#cccccc;
+    --beige-very-dark:#807e7e;    /* zelf tussen gevoegd voor bij afmeting (desktop) */
+    --gray:#484848;
+    --blue-dark:#0058a3;
+}
+
+html {
+
+    font-size: 18px;
+}
+
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;   /* anders wordt button niet gepakt */
+}
+
+
+.container {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header { grid-area: hd; }
+
+
+header nav ul {    /* flexen om tussen de menu-items op een makkelijke wijze zelfde tussenruimte te creeren zonder gedonder met margin */
+                    /* nadeel: moet weer een vastgestelde afmeting hebben (al dan niet relative) */
+    display: flex;
+    justify-content:space-between ;
+}
+
+
+header nav ul li {
+    display: inline;
+    list-style: none;
+    font-weight: 900;
+}
+
+
+header nav ul li:hover { cursor: pointer; }
+
+
+header input {
+    border: 3px solid black;
+    background-image: linear-gradient(to right, var(--beige-light), var(--beige-light)), url(../../images/search-icon.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--beige-light);
+}
+
+header input:hover { background-image: linear-gradient(to right, var(--beige-dark), var(--beige-dark)), url(../../images/search-icon.svg); }
+
+img[src$="logo.png"] { grid-area: logo; }
+
+
+main { grid-area: main; }
+
+.korte-omschrijving { font-weight: 500; }
+
+.prijs { font-weight: 900; }
+
+p {
+    grid-area: p1;
+    font-weight: 500;
+}
+
+
+img[src$="bronden-vloerkleed-1.jpg"] { grid-area: img1; }
+
+img[src$="bronden-vloerkleed-2.jpg"] { grid-area: img2; }
+
+
+
+/*  - - - - - - - - - - formulier1 & formulier 2 (basis) - - */
+
+
+fieldset[id="kies-afmeting"] input:checked + label,
+fieldset[id="hoe-kom-je-eraan"] input:checked + label {
+    border: 1px solid blue;
+}
+
+input[id^="bronden-vloerkleed-kleur"]:hover + label,
+fieldset[id="kies-afmeting"] input:hover + label,
+fieldset[id="hoe-kom-je-eraan"] input:hover + label {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+
+
+legend { font-weight: 900; }
+
+
+
+/*  - - - - - - - - - - formulier1 (basis) - - - - - - - - - */
+
+
+.formulier1 {
+    grid-area: form1;
+    display: grid;
+}
+
+
+.formulier1 fieldset { border: none; }
+
+.formulier1 input { display: none; }
+
+fieldset[id="kies-kleur"] { grid-row: 1 / span 1; }
+
+hr {
+    grid-row: 2 / span 1;
+    border: none;
+    border-top: 1px solid var(--beige-dark);
+}
+
+fieldset[id="kies-afmeting"] { grid-row: 3 / span 1; }
+
+
+
+/*  - - - - - - - - - - formulier1: Kies kleur (basis) - - - - - - - */
+
+
+label[for^="bronden-vloerkleed-kleur"] {
+    display: inline-block;
+
+    border-radius: 10%;   /* 5px */
+    border: 1px solid var(--beige-middle);
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input[id^="bronden-vloerkleed-kleur"]:checked + label { border: 2px solid blue; }
+
+input[id^="bronden-vloerkleed-kleur"]:hover + label { border: 2px solid black; }
+
+
+label[for="bronden-vloerkleed-kleur-1"] { background-image: url(../../images/bronden-vloerkleed-kleur-1.jpg); }
+
+label[for="bronden-vloerkleed-kleur-2"] { background-image: url(../../images/bronden-vloerkleed-kleur-2.jpg); }
+
+label[for="bronden-vloerkleed-kleur-3"] { background-image: url(../../images/bronden-vloerkleed-kleur-3.jpg); }
+
+
+
+
+
+
+
+/*  - - - - - - - - - formulier1: kies-afmeting (basis) - - - - - - - - - - */
+
+
+fieldset[id="kies-afmeting"] label { 
+    display: inline-flex;
+    border: 1px solid var(--beige-middle);
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* - - - - -- - - - - formulier 2 (Basis) - -- - - - - -- - - - - -- - - - -- */
+
+
+
+.formulier2 { grid-area: form2; }
+
+
+fieldset[id="hoe-kom-je-eraan"] {
+    position: relative;
+    border: 1px solid var(--beige-middle);
+}
+
+fieldset[id="hoe-kom-je-eraan"] legend { position: absolute; }
+
+
+fieldset[id="hoe-kom-je-eraan"] input { display: none; }
+
+fieldset[id="hoe-kom-je-eraan"] label {
+    display: block;
+    border: 1px solid white;   /* om verspringen te voorkomen als het wordt gehoverd of wordt geselecteerd indien er gebruik wordt gemaakt van een border */
+    border-radius: 5px;
+}
+
+fieldset[id="hoe-kom-je-eraan"] > label > span {
+    display: block;
+}
+
+
+fieldset[id="hoe-kom-je-eraan"] img { float: left; }
+
+
+button {
+    display: inline-block;
+    color: white;
+    background-color: var(--blue-dark);
+    border: none;
+}
+
+button:hover { cursor: pointer; }
+
+
+
+
+
+/*  - - - - - - - - - - Productinformatie (basis)- - - - - - - - - - */
+
+.productinformatie { grid-area: prod; }
+
+.productinformatie:hover { cursor: pointer; }
+
+.productinformatie a {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    border-bottom: 1px solid var(--beige-middle);    
+}
+
+
+
+/* ----    -----    ----    ----  Tekst opmaak  ----   ----    ----    ----    ----  ---- */
+
+.vet { font-weight: 900; }
+
+.underline { text-decoration: underline; }
+
+
+/* ----------------------------------------------- Mobile --------------------------------------------------- */
+
+@media screen and (max-width: 1440px) {
+
+    .container {
+        width: 475px;
+        padding: 0px 8px 0px 11px;
+        grid-template-rows: 132px 175px 217px 260px 257px 197px 350px 75px 383px;
+        /*                  hd    logo  main  img1  img2  p1    form1 prod form2 */
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "hd"
+            "logo" 
+            "main"
+            "img1"
+            "img2"
+            "p1"
+            "form1"
+            "prod"
+            "form2";
+
+    }
+
+    header nav ul li {
+        font-size: 1.10rem;
+        margin: 14px 0px 0px 0px;
+    }
+
+    header input {
+        width: 100%;
+        height: 53px;
+        margin-top: 28px;
+        padding-left: 11px;
+        font-size: 1.0rem;
+        background-size: 88% 53px, 45px;
+        background-position: left, right 5px center;
+    }
+
+
+    img[src$="logo.png"] {
+        width: 100%;
+        height: 150%;
+        clip-path: inset(20.2% 0px 13.3% 0px);
+        margin-top: -53px;
+    }
+
+    main { padding: 0px 0px 0px 21px; }
+
+    main h1{ 
+        font-size: 1.95rem; 
+        margin: 24px 0px 0px 0px;
+    }
+    
+    .korte-omschrijving {
+        font-size: 0.97rem;
+        line-height: 21px;
+        margin: 23px 0px 0px 0px;
+    }
+
+    .prijs {
+        font-size: 2.0rem;
+        margin: 22px 0px 0px 0px;
+    }
+
+    img[src$="bronden-vloerkleed-1.jpg"] {
+        clip-path: inset(30% 0px 14.2% 0px); 
+        width: 457px;
+        height: 451px;    
+        margin-top: -134px;
+    }
+
+    img[src$="bronden-vloerkleed-2.jpg"] {
+        clip-path: inset(0px 10% 50% 0px);
+        width: 508px;
+        height: 506px;
+        margin-top: 4px;        
+    }
+
+    p {
+        margin-top: 29px;        
+        font-size: 1.10rem;
+        line-height: 30px;
+    }
+
+    /* - - - - - - - - - - formulier1 & formulier2 (Mobile) - - - - - - - - */
+    legend { font-size: 1.15rem; }
+
+
+    /* - - - - - - - - - - formulier 1 (Mobile) - - - - - - - - - - - - */
+
+    .formulier1 {
+        grid-template-rows: 173px 6px 149px;
+        border-top: 2px solid var(--beige-dark);
+        padding-left: 0px;
+        padding-top: 19px;
+    }
+
+    label[for^="bronden-vloerkleed-kleur"] {
+        width: 90px;
+        height: 89px;
+        margin-top: 21px;
+        margin-right: 0px;
+        background-size: 98% 97%;
+    }
+
+    label[for="bronden-vloerkleed-kleur-2"] {
+        margin-left: 0px;
+        margin-right: -1px;
+    }
+
+
+    /*  - - - - - - - - - - formulier1: kies-afmeting (mobile) - - - - */
+
+    
+    fieldset[id="kies-afmeting"] { margin-top: 16px;  }
+
+    fieldset[id="kies-afmeting"] label {      
+        width: 110px;
+        height: 33px;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-right: 1px;
+        border-radius: 10px;
+    }
+
+    fieldset[id="kies-afmeting"] label[for="170x240cm"] { margin-right: -1px; }
+
+    fieldset[id="kies-afmeting"] label span { 
+        font-size: 18px; 
+        text-decoration: underline solid black 1px;
+    }
+
+    /*  - - - - - - - - - - Productinformatie (Mobile)- - - - - - - - - - */
+
+    .productinformatie { margin-top: 0px; }
+
+    .productinformatie a {
+        align-items: center;
+        height: 76px;
+        /* padding-bottom: 0px; */
+        margin: 0px 0px 0px 0px;
+        padding: 9px 0px 0px 0px;
+        font-size: 1.8rem;
+        border-top: none;
+        border-top: 2px solid var(--beige-middle);
+    }
+
+
+    img[src$="right-arrow-svg.svg"] { width: 37px; }
+
+    /*  - - - - - - - - - - Formulier 2 (Mobile) - - - - - - - - - - - - */
+
+    fieldset[id="hoe-kom-je-eraan"] {
+        padding: 10px 0px 0px 0px;
+        margin-top: 94px;
+        height: 190px;
+        border-radius: 9px; 
+    }
+
+
+    fieldset[id="hoe-kom-je-eraan"] legend { top: -47px; }
+    
+    fieldset[id="hoe-kom-je-eraan"] label { margin-bottom: 13px; }
+    
+    fieldset[id="hoe-kom-je-eraan"] img {
+        width: 35px;
+        margin-right: 11px;
+        margin-left: 21px;
+    }
+
+
+    img[src$="store-icon.svg"] {margin-top: 3px;}
+
+    /* .formulier2 fieldset label { font-size: 18px; }    Onderzoek heeft uitgewezen dat 18px het beste overeenkomt */
+
+
+    button {
+        margin-top: 11px;
+        width: 100%;
+        height: 72px;
+        font-size: 1.15rem;
+        border-radius: 8px;
+    }
+
+}
+
+/* ----------------------------------------------- Desktop ------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 1440px;
+
+        grid-template-columns: 108px repeat(4, 306px) 108px;
+        grid-template-rows: 75px 192px 192px 255px 81px;
+        grid-template-areas: 
+            "left  hd    hd     hd    hd    right"
+            "left  logo  main   img2  img2  right"
+            "left  img1  img1   img2  img2  right"
+            "left  img1  img1   form1 form2 right"
+            "left  p1    p1     prod  prod  right";
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav { margin-top: -6px; }
+
+    header nav ul { width: 319px; }
+
+    header nav ul li { font-size: 0.85rem; }
+
+    header input {
+        width: 219px;
+        height: 37px;
+        margin-top: -4px;
+        padding-left: 7px;
+        font-size: 0.7rem;
+        background-size: 180px 31px, 28px; 
+        background-position: left, right 3px top;
+    }
+
+    img[src$="logo.png"] {
+        width: 305px;
+        align-self: stretch;
+    }
+
+    main { padding: 15px 0px 0px 13px; }
+
+    main h1{ font-size: 1.4rem; }
+    
+    .korte-omschrijving {
+        font-size: 0.65rem;
+        font-weight: 500;
+        line-height: 15px;
+        margin-top: 16px;
+    }
+
+    .prijs {
+        font-size: 1.4rem;
+        margin-top: 13px;
+    }
+
+    
+    img[src$="bronden-vloerkleed-1.jpg"],
+    img[src$="bronden-vloerkleed-2.jpg"] {
+        width: 612px;
+    }
+
+    img[src$="bronden-vloerkleed-1.jpg"] {
+        clip-path: inset(65px 0px 52px 0px);
+        height: 447px;    
+        transform: scaleY(1.35);
+        margin-top: -9px;
+    }
+
+    p {
+        margin-top: 13px;        
+        font-size: 0.75rem;
+        line-height: 20px;
+    }
+
+    img[src$="bronden-vloerkleed-2.jpg"] {
+        height: 384px;
+        clip-path: inset(0px 60px 165px 0px);
+        transform: scale(1.11, 1.75);
+        margin-top: 144px;
+        margin-left: 34px;
+    }
+
+
+
+    /* - - - - -- -- - - - - formulier1 & formulier2 (Desktop) - - - - - - - - */
+    legend { font-size: 0.8rem; }
+
+
+    /* - - - - - - - - - - - formulier1 (Desktop) - - - - - - - - - - - */
+
+
+    .formulier1 {
+        grid-template-rows: 132px 6px 119px;
+        padding-left: 15px;
+    }
+
+
+
+    /*  - - - - - - - - - - formulier1: kies-kleur (desktop) - - - - */
+
+
+    fieldset[id="kies-kleur"] { margin-top: 13px; }
+
+
+    label[for^="bronden-vloerkleed-kleur"] {
+        width: 62px;
+        height: 61px;
+        margin-top: 14px;
+        margin-right: -1px;
+        background-size: 96% 100%;
+    }
+
+    label[for="bronden-vloerkleed-kleur-2"] {
+        margin-left: -1px;
+        margin-right: -2px;
+    }
+
+
+
+    /*  - - - - - - - - - - formulier1: kies-afmeting (desktop) - - - - */
+
+    
+    fieldset[id="kies-afmeting"] { margin-top: 8px; }
+        
+    fieldset[id="kies-afmeting"] label {    
+        width: 75px;
+        height: 24px;
+        font-size: 20px;
+        margin-top: 9px;
+        margin-right: -2px;
+        border-radius: 5px;
+    }
+
+    fieldset[id="kies-afmeting"] label span {
+        font-size: 12px;
+        text-decoration: underline solid var(--beige-very-dark) 2px;
+    }
+
+
+    /*  - - - - - - - - - - Formulier 2: desktop - - - - - - - - - - */
+
+    .formulier2 { padding-left: 15px; }
+
+    fieldset[id="hoe-kom-je-eraan"] {
+        padding: 7px 0px 9px 15px;
+        margin-top: 45px;
+        height: 130px;
+        border-radius: 6px;
+    }
+
+
+    fieldset[id="hoe-kom-je-eraan"] legend { top: -33px; }
+
+
+    fieldset[id="hoe-kom-je-eraan"] img {                 /* label img { */
+        width: 25px;
+        margin-right: 8px;
+        margin-left: 0px;
+    }
+
+    fieldset[id="hoe-kom-je-eraan"] label { margin-bottom: 10px; }
+
+    .formulier2 fieldset span { font-size: 12px; }
+
+    button {     
+        margin-top: 8px;
+        width: 216px;
+        height: 49px;
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+
+    
+    /* - - - - - - - - - - - - - Productinformatie: desktop - - - - - - - - */
+
+
+    .productinformatie { margin-top: 14px; }
+
+    .productinformatie a {
+        align-items: center;
+        height: 60px;
+        margin: 0px 8px 0px 16px;
+        padding: 0px 16px 0px 15px;
+        font-size: 1.3rem;
+        border-top: 1px solid var(--beige-middle);
+    }
+
+    img[src$="right-arrow-svg.svg"] { width: 25px; }
+
+}
