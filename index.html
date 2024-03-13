@@ -1,75 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | FAQ Accordion Card</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    
-    <link rel="stylesheet" href="./styles/stylesheet.css">
+        <title>Portfolio</title>
 
     
+        <!-- <link rel="stylesheet" href="./styles/stylesheet.css">   -->
+    </head>
+    
+    <body>
+        <h1>Portfolio</h1>
+        <h2>Wim Jakobs</h2>
 
-</head>
-<body>
-    <h1>Portfolio</h1>
-    <h2>Wim Jakobs</h2>
-
-<ul>
-
-    <li>IKEA
         <ul>
-            <li><a href="https://wimjakobs.github.io/IKEA/index/">Webpage</a></li>
-            <li><a href="https://github.com/WimJakobs/IKEA">Ontwerp</a></li>
-        </ul>
-    </li>
-    
-    
-    <li>Accordion
-        <ul>
-            <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/">Webpage</a></li>
-            <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
-            <li><a href="https://github.com/WimJakobs/accordion">Ontwerp</a></li>
-        </ul>
-    </li>
+
+            <li>IKEA
+                <ul>
+                    <li><a href="https://wimjakobs.github.io/IKEA/index/">Webpage</a></li>
+                    <li><a href="https://github.com/WimJakobs/IKEA">Ontwerp</a></li>
+                </ul>
+            </li>
+            
+            
+            <li>Accordion
+                <ul>
+                    <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/">Webpage</a></li>
+                    <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
+                    <li><a href="https://github.com/WimJakobs/accordion">Ontwerp</a></li>
+                </ul>
+            </li>
 
 
 
-    <li>Weer applicatie (als assessment)
-        <ul>
-            <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">openen</button></li>
-            <li><a href="https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html">Webpage</a></li>
-            <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
+            <li>Weer applicatie (als assessment)
+                <ul>
+                    <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">openen</button></li>
+                    <li><a href="https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html">Webpage</a></li>
+                    <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
+                </ul>
+            </li>
+            
+                
+
         </ul>
-    </li>
-    
+
+        
+    </body>
+
+    <script>
+        const key=document.getElementById('key');
+        const enter=document.getElementById('enter');
+
+        enter.addEventListener('click', urlOpenen);
+
+        function urlOpenen() {
+            window.open("https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html?key=" + key.value);
+        }
         
 
-</ul>
-
-    
-</body>
-
-<script>
-    const key=getelementbyId('key');
-    const enter=getelemtbyID('enter');
-
-    enter.addeventlisterner('click', urlOpenen);
-
-    function urlOpenen() {
-        window.open("https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html?key=" + key);
-    }
-    
-
-    
-    
-</script>
+        
+        
+    </script>
 
 
 </html>
