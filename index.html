@@ -43,7 +43,7 @@
 
     <li>Weer applicatie (als assessment)
         <ul>
-            <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button>openen</button></li>
+            <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">openen</button></li>
             <li><a href="https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html">Webpage</a></li>
             <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
         </ul>
@@ -56,7 +56,20 @@
     
 </body>
 
+<script>
+    const key=getelementbyId('key');
+    const enter=getelemtbyID('enter');
 
+    enter.addeventlisterner('click', urlOpenen);
+
+    function urlOpenen {
+        window.open("https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html?key=" + key");
+    }
+    
+
+    
+    
+</script>
 
 
 </html>
