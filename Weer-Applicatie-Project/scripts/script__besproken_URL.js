@@ -98,7 +98,7 @@ function geoAPI() {
             let samengesteldUrlGEO;    
 
             
-            const urlGEO = 'https://api.openweathermap.org/geo/1.0/direct?';
+            const urlGEO = 'https://api.openweathermap.org/geo/1.0/direct?';   //20240313  http -> https
 
             locatiePlaatsnaam = locatie.value;
             samengesteldUrlGEO = urlGEO + "q=" + locatiePlaatsnaam +"&appid=" + appid ;
