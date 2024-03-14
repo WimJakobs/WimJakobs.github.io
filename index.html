@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
+    
+	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -8,6 +9,20 @@
 
     
         <!-- <link rel="stylesheet" href="./styles/stylesheet.css">   -->
+
+        <style>
+            .eerste-li {
+                margin-top: 10px;
+            }
+
+            p {
+                margin: 2px;
+            }
+        </style>
+
+
+
+
     </head>
     
     <body>
@@ -16,7 +31,7 @@
 
         <ul>
 
-            <li>IKEA
+            <li class="eerste-li">IKEA
                 <ul>
                     <li><a href="https://wimjakobs.github.io/IKEA/index/">Webpage</a></li>
                     <li><a href="https://github.com/WimJakobs/IKEA">Ontwerp</a></li>
@@ -24,7 +39,7 @@
             </li>
             
             
-            <li>Accordion
+            <li class="eerste-li">Accordion
                 <ul>
                     <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/">Webpage</a></li>
                     <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
@@ -34,10 +49,10 @@
 
 
 
-            <li>Weer applicatie (als assessment)
+            <li class="eerste-li">Weer applicatie (als assessment)
                 <ul>
-                    <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/">openweathermap.org</a> waarvoor een key benodigd is.</p>
-                    <p>De benodigde key is gratis op te vragen bij <a href="https://openweathermap.org/">openweathermap.org</a>  door een account aan te maken en de key in het onderstaande veld in te vullen</p>
+                    <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/" target="_blanc">openweathermap.org</a> waarvoor een key benodigd is.<br>
+                    De benodigde key is gratis op te vragen bij <a href="https://openweathermap.org/">openweathermap.org</a>  door een account aan te maken en de key in het onderstaande veld in te vullen</p>
                     <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">webpagina openen</button></li>
                     <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
                 </ul>
