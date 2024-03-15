@@ -11,14 +11,96 @@
         <!-- <link rel="stylesheet" href="./styles/stylesheet.css">   -->
 
         <style>
-            .eerste-li {
-                margin-top: 10px;
+
+
+            * {
+                /* margin: 0px; */
+                /* padding: 0px; */
+                box-sizing: border-box;
+            }            
+
+
+            body {
+                background-color: aqua;
+            }
+
+            .container {
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px;
+                width: 1200px;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+
+            h2 {
+                margin-bottom: 0px;
+            }
+
+
+            .links-linkjes-rechts-plaatjes {
+                display: flex;
+            }
+            
+
+            div > ul {
+                min-width: 600px;
+                max-width: 600px;
+                /* float: left; */
+            
+            }
+
+            div > div {
+                /* width: 600px; */
+                min-width: 600px;
+                max-width: 600px;
             }
 
             p {
                 margin: 2px;
             }
+        
+        
+
+
+            /* ----------------------------------------------- Mobile --------------------------------------------------- */
+
+            @media screen and (max-width: 1300px) {
+                
+                .container {
+                    width: 375px;
+                }
+                
+                .links-linkjes-rechts-plaatjes {
+                    flex-direction: column;
+                } 
+
+                div > ul {
+                    min-width: 365px;
+                    max-width: 365px;
+                    /* float: left; */
+                
+                }
+
+                div > div {
+                    /* width: 600px; */
+                    min-width: 365px;
+                    max-width: 365px;
+                }                
+                
+
+                
+            }
+        
+
+        
+        
+        
         </style>
+
+
+
 
 
 
@@ -26,47 +108,63 @@
     </head>
     
     <body>
-        <h1>Portfolio</h1>
-        <h2>Wim Jakobs</h2>
 
-        <ul>
 
-            <li class="eerste-li">IKEA
-                <ul>
-                    <li><a href="https://wimjakobs.github.io/IKEA/index/" target="_blank">Webpage</a></li>
-                    <li><a href="https://github.com/WimJakobs/IKEA" target="_blank">Ontwerp</a></li>
-                    <a href="./images/ikea-mobile-1.jpg" target="_blank"><img src="./images/ikea-mobile-1.jpg" width="100px"></a>
-                    <a href="./images/ikea-desktop-1.jpg" target="_blank"><img src="./images/ikea-desktop-1.jpg" width="100px"></a>
-                </ul>
-            </li>
-            
-            
-            <li class="eerste-li">Accordion
-                <ul>
-                    <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/" target="_blank">Webpage</a></li>
-                    <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true" target="_blank">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
-                    <li><a href="https://github.com/WimJakobs/accordion" target="_blank">Ontwerp</a></li>
-                </ul>
-            </li>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <div>Wim Jakobs</div>
 
 
 
-            <li class="eerste-li">Weer applicatie (als assessment)
-                <ul>
-                    <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a> waarvoor een key benodigd is.<br>
+                <h2>IKEA</h2>
+                <div class="links-linkjes-rechts-plaatjes">
+                    <ul>
+                        <li><a href="https://wimjakobs.github.io/IKEA/index/" target="_blank">Webpage</a></li>
+                        <li><a href="https://github.com/WimJakobs/IKEA" target="_blank">Ontwerp</a></li>
+                    </ul>
+                    <div>
+                        <a href="./images/ikea-mobile-1.jpg" target="_blank"><img src="./images/ikea-mobile-1.jpg" width="100px"></a>
+                        <a href="./images/ikea-desktop-1.jpg" target="_blank"><img src="./images/ikea-desktop-1.jpg" width="100px"></a>
+                    </div>
+                </div>
+                
+                
+                <h2>Accordion</h2>
+                <div class="links-linkjes-rechts-plaatjes">
+                    <ul>
+                        <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/" target="_blank">Webpage</a></li>
+                        <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true" target="_blank">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
+                        <li><a href="https://github.com/WimJakobs/accordion" target="_blank">Ontwerp</a></li>
+                    </ul>
+                    <div>
+                        <a href="./images/accordion-desktop-1.jpg" target="_blank"><img src="./images/accordion-desktop-1.jpg" width="100px"></a>
+                        <a href="./images/accordion-desktop-2.jpg" target="_blank"><img src="./images/accordion-desktop-2.jpg" width="100px"></a>
+                    </div>
+                </div>
+
+
+
+                <h2>Weer applicatie (als assessment)</h2>
+                <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a> waarvoor een key benodigd is.<br>
                     De benodigde key is gratis op te vragen bij <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a>  door een account aan te maken en de key in het onderstaande veld in te vullen</p>
-                    <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">webpagina openen</button></li>
-                    <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
-                    <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" width="100px"></a>
-                    <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" width="100px"></a>
-                    <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" width="100px"></a>
-                    <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" width="100px"></a>
-                </ul>
-            </li>
+                <div class="links-linkjes-rechts-plaatjes">
+                    <ul>
+                        <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">webpagina openen</button></li>
+                        <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
+                    </ul>   
+                    <div>
+                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" width="100px"></a>
+                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" width="100px"></a>
+                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" width="100px"></a>
+                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" width="100px"></a>
+                    </div>                 
+                </div>
+            </div>
+            
             
                 
 
-        </ul>
+
 
         
     </body>
