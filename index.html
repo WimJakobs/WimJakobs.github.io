@@ -14,27 +14,41 @@
 
 
             * {
-                /* margin: 0px; */
-                /* padding: 0px; */
+                margin: 0px;
+                padding: 0px;
                 box-sizing: border-box;
             }            
 
 
             body {
                 background-color: aqua;
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content:center;
+
             }
 
             .container {
-                margin-left: auto;
-                margin-right: auto;
+                /* margin-left: auto; */
+                /* margin-right: auto; */
                 padding: 5px;
                 width: 1200px;
                 background-color: white;
                 border-radius: 10px;
             }
 
+            h1 {
+                text-align: center;
+            }
+            .naam {
+                text-align: center;
+                min-width: 100%;
+            }
 
             h2 {
+                margin-top: 40px;
                 margin-bottom: 0px;
             }
 
@@ -43,10 +57,22 @@
                 display: flex;
             }
             
+            img {
+                width: 190px;
+            }
+
 
             div > ul {
                 min-width: 600px;
                 max-width: 600px;
+
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+
+
                 /* float: left; */
             
             }
@@ -61,13 +87,23 @@
                 margin: 2px;
             }
         
-        
+            img {
+                vertical-align: middle;
+            }
+
+
 
 
             /* ----------------------------------------------- Mobile --------------------------------------------------- */
 
             @media screen and (max-width: 1300px) {
-                
+
+
+                body {
+                    align-content:start;
+
+                }                
+
                 .container {
                     width: 375px;
                 }
@@ -87,8 +123,13 @@
                     /* width: 600px; */
                     min-width: 365px;
                     max-width: 365px;
+                    margin-top: 5px;
                 }                
                 
+                p {
+                    /*padding-left: 5px;*/
+                    text-indent: 10px;
+                }
 
                 
             }
@@ -112,7 +153,9 @@
 
         <div class="container">
             <h1>Portfolio</h1>
-            <div>Wim Jakobs</div>
+            <div class="naam">Wim Jakobs</div>
+            <!-- <br> -->
+            <!-- <br> -->
 
 
 
@@ -120,11 +163,11 @@
                 <div class="links-linkjes-rechts-plaatjes">
                     <ul>
                         <li><a href="https://wimjakobs.github.io/IKEA/index/" target="_blank">Webpage</a></li>
-                        <li><a href="https://github.com/WimJakobs/IKEA" target="_blank">Ontwerp</a></li>
+                        <li><a href="https://github.com/WimJakobs/IKEA" target="_blank">Opdracht & Ontwerp</a></li>
                     </ul>
                     <div>
-                        <a href="./images/ikea-mobile-1.jpg" target="_blank"><img src="./images/ikea-mobile-1.jpg" width="100px"></a>
-                        <a href="./images/ikea-desktop-1.jpg" target="_blank"><img src="./images/ikea-desktop-1.jpg" width="100px"></a>
+                        <a href="./images/ikea-mobile-1.jpg" target="_blank"><img src="./images/ikea-mobile-1.jpg" ></a>
+                        <a href="./images/ikea-desktop-1.jpg" target="_blank"><img src="./images/ikea-desktop-1.jpg"></a>
                     </div>
                 </div>
                 
@@ -134,29 +177,29 @@
                     <ul>
                         <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/" target="_blank">Webpage</a></li>
                         <li><a href="https://wimjakobs.github.io/accordion/index-tekst-in-html-element/index.html?achterdeur=true" target="_blank">Webpage (uitgeklapt blijft uitgeklapt staan)</a></li>
-                        <li><a href="https://github.com/WimJakobs/accordion" target="_blank">Ontwerp</a></li>
+                        <li><a href="https://github.com/WimJakobs/accordion" target="_blank">Opdracht & Ontwerp</a></li>
                     </ul>
                     <div>
-                        <a href="./images/accordion-desktop-1.jpg" target="_blank"><img src="./images/accordion-desktop-1.jpg" width="100px"></a>
-                        <a href="./images/accordion-desktop-2.jpg" target="_blank"><img src="./images/accordion-desktop-2.jpg" width="100px"></a>
+                        <a href="./images/accordion-desktop-1.jpg" target="_blank"><img src="./images/accordion-desktop-1.jpg"></a>
+                        <a href="./images/accordion-desktop-2.jpg" target="_blank"><img src="./images/accordion-desktop-2.jpg"></a>
                     </div>
                 </div>
 
 
 
                 <h2>Weer applicatie (als assessment)</h2>
-                <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a> waarvoor een key benodigd is.<br>
-                    De benodigde key is gratis op te vragen bij <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a>  door een account aan te maken en de key in het onderstaande veld in te vullen</p>
+                <p>Deze weersapplicatie maakt gebruik van <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a> waarvoor een key benodigd is.</p>
+                <p>De benodigde key is gratis op te vragen bij <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a>  door een account aan te maken en de key in het onderstaande veld in te vullen.</p>
                 <div class="links-linkjes-rechts-plaatjes">
                     <ul>
                         <li><input type="text" required placeholder="Vul hier uw Key in" name="key" id="key"><button id="enter">webpagina openen</button></li>
-                        <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project">Ontwerp</a></li>
+                        <li><a href="https://github.com/WimJakobs/Weer-Applicatie-Project-Assessment" target="_blank">Opdracht & Ontwerp</a></li>
                     </ul>   
                     <div>
-                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-1.png" width="100px"></a>
-                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-2.png" width="100px"></a>
-                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-3.png" width="100px"></a>
-                        <a href="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" target="_blank"><img src="./images/Screenshots-weerapplicatie/Weer-Applicatie-Project-screenshot-4.png" width="100px"></a>
+                        <a href="./images/Weer-Applicatie-Project-screenshot-1.png" target="_blank"><img src="./images/Weer-Applicatie-Project-screenshot-1.png"></a>
+                        <!-- <a href="./images/Weer-Applicatie-Project-screenshot-2.png" target="_blank"><img src="./images/Weer-Applicatie-Project-screenshot-2.png"></a> -->
+                        <a href="./images/Weer-Applicatie-Project-screenshot-3.png" target="_blank"><img src="./images/Weer-Applicatie-Project-screenshot-3.png"></a>
+                        <a href="./images/Weer-Applicatie-Project-screenshot-4.png" target="_blank"><img src="./images/Weer-Applicatie-Project-screenshot-4.png"></a>
                     </div>                 
                 </div>
             </div>
@@ -179,7 +222,9 @@
             if (key.value != "") {
                 window.open("https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html?key=" + key.value);
             } else {
-                window.alert("vul a.u.b. een key in");
+                if (window.confirm("Wilt u doorgaan zonder ingevulde key?")) {
+                    window.open("https://wimjakobs.github.io/Weer-Applicatie-Project/index__besproken_aanpassing-bestandsverwijzingen_URL.html?key=" + key.value);
+                }
             } 
         }
         
